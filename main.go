@@ -110,8 +110,8 @@ func notesHandler(db storer.Storer) func(w http.ResponseWriter, r *http.Request)
 
 			log.Printf("POST %s %s\n", noteUUID.String(), body)
 
-			w.WriteHeader(http.StatusOK)
-			fmt.Fprintf(w, noteUUID.String())
+			w.WriteHeader(http.StatusNoContent)
+			// fmt.Fprintf(w, noteUUID.String())
 			return
 		}
 
